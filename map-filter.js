@@ -13,6 +13,7 @@ const num = [3,4,5,6,7,8,9]
 // }
 // const sq = num.map(square)
 // console.log(sq); 
+
 //____________way 3________________
 const sq = num.map(x=>x*x);
 console.log(sq);
