@@ -12,7 +12,7 @@
 // let value=[]
 // let value={}
 
-let value=false
+let value=NaN
 if(value){
     console.log("Condition is true");
 }
