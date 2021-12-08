@@ -19,3 +19,6 @@ console.log(sq);
 //____________filter________________
 const broVai = num.filter(x=>x>6);
 console.log(broVai);
+//____________find________________
+const isThere = num.find(x=>x>6);
+console.log(isThere);
