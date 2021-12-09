@@ -1,4 +1,4 @@
-const num = [1,2,3,4,5,6];
+const num = [1,2,3,4,5,6,7,8,9,10];
 const part = num.slice(1,1); //slice= (start to endBoundary index)
 console.log(num);
 console.log(part);
