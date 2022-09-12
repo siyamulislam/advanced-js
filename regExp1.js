@@ -52,8 +52,11 @@ re= /Hello\b/; //word boundary separate with space
 re = /x(?=y)/; //match x only if x is before y
 re = /x(?!y)/; //match x only if x is not before y
 
+re =/^([0-9]){4}$/ // postal code 4 digit
+re =/^(\+)?(88)?(0)?1([0-9]){9}$/ // number match 11 digit  with all mix
+re=/^([a-zA-Z0-9]\.?)+[^\.]@([a-zA-Z0-9]\.?)+[^\.]$/;
 
-str="dfdfxytyt";
+str="sFi.am.34@gmail.com";
 
 console.log(re.exec(str));
 reTest(re,str);
