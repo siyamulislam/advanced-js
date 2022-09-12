@@ -33,9 +33,27 @@ re = /^[0-9]{0,3}(\.(00|50)?)$/; // not more than 3 digits and can have decimal 
 //Parentheses () - grouping
 re =/^([0-9]){3}/ //start with only 3  digits
 re =/^01([0-9]){9}$/ //bd number match 11 digit  only
-re =/^\+8801([0-9]){9}$/ // number match 11 digit  with country code
+re =/^\+8801([0-9]){9}$/ // nu mber match 11 digit  with country code
 re = /^([0-9]x){3}/ //2x9x8x9x match pattern like this
-str="2x9x8x9x";
+  
+//Shorthand char Class
+re= /\w/; // Word Character - alpha numeric or 
+re= /\w+/; // Word char one or more
+re= /\W/; // Non Word char  
+re= /\W+/; // Non Word char one or more 
+re= /\d/; //  digit check  
+re= /\d+/; // digit check one or more 
+re= /\D/; // non digit 
+re= /\D+/; // non digit  + more
+re= /\s/; // match space
+re= /\s+/; // match space + more
+re= /\S/; // match not space  
+re= /Hello\b/; //word boundary separate with space
+re = /x(?=y)/; //match x only if x is before y
+re = /x(?!y)/; //match x only if x is not before y
+
+
+str="dfdfxytyt";
 
 console.log(re.exec(str));
 reTest(re,str);
