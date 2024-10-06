@@ -3,10 +3,10 @@ document.getElementById('get_jokes').addEventListener('click', load_jokes);
 
 function load_joke() {
     document.getElementById('output').innerHTML = `<h5>loading...</h5>`;
-    fetch('http://api.icndb.com/jokes/random')
+    fetch('https://v2.jokeapi.dev/joke/Any')
         .then(res => res.json())
         .then(data => {
-            document.getElementById('output').innerHTML = `<h5>"${data.value.joke}"</h5>`;
+            document.getElementById('output').innerHTML = `<h5>"${data.setup} </br> >>>  ${data.delivery}"</h5>`; 
         })
         .catch(er => console.log(er))
 }
@@ -14,13 +14,13 @@ function load_joke() {
 function load_jokes() {
     let number = document.getElementById('jokesNum').value;
     document.getElementById('output').innerHTML = `<h5>Loading ${number} jokes..</h5>`;
-    fetch(`http://api.icndb.com/jokes/random/${number}`)
+    fetch(`https://v2.jokeapi.dev/joke/Any?amount=${number}`)
         .then(res => res.json())
         .then(data => {
-            let jokes=data.value;
+            let jokes=data.jokes;
             let output = "<ol>";
             jokes.forEach(item => {
-                output += `<li>${item.joke}</li>`
+                output += `<li>${item.setup} </br> >>>  ${item.delivery}</li>`
             });
             output += "</ol>";
             document.getElementById('output').innerHTML = `<h6>${output}</h6>`;
